@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MT_GrowthSimple2D
+  m_Shader: {fileID: 4800000, guid: 1a96381ff1334a643bc4ef7a330dffd6, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _OUTLINEUSERIMCOLOR_ON
+  - _USEDETAILBLACK_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BlackTex:
+        m_Texture: {fileID: 2800000, guid: c0adabbd63b679b49a139575d3ff3927, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrowthMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 15a9808d358996f4f87d2c6dfc707ddd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BlackDebug: 0
+    - _BlackFeather: 0.08
+    - _BlackNoiseScale: 2
+    - _BlackOpacity: 0.5
+    - _BlackSpotExp: 1.5
+    - _BlackThreshold: 0.55
+    - _BlendMode: 1
+    - _BloodMix: 1
+    - _EdgeFlowStrength: 0
+    - _EdgeWidth: 0.1
+    - _Growth: 0
+    - _IgnoreBaseAlpha: 0
+    - _InsideAlpha: 1
+    - _KeepOutlineAfter: 0
+    - _KeepRim: 1
+    - _NoiseAmp: 0.951
+    - _NoiseScale: 1
+    - _OutlineInsideOnly: 1
+    - _OutlineSoft: 0.4
+    - _OutlineStartAt: 0.98
+    - _OutlineThresh: 0.08
+    - _OutlineUseRimColor: 1
+    - _OutlineWidthPx: 2
+    - _R0: 1
+    - _R1: 0
+    - _RadiusPulseAmp: 0
+    - _RadiusPulseFreq: 0.8
+    - _RimBoost: 3
+    - _RimFadeOutAt: 0.95
+    - _RimFadeSoft: 0.02
+    - _RimHoldSoft: 0.6
+    - _RimHoldStartAt: 0.98
+    - _RimHoldWidthPx: 3
+    - _RimWobbleAmp: 0
+    - _RimWobbleFreq: 2
+    - _UseDetailBlack: 1
+    - _UseMap: 0
+    m_Colors:
+    - _BlackNoiseScroll: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - _BlackOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _BlackTint: {r: 0.049999982, g: 0.04, b: 0.04, a: 1}
+    - _BloodColor: {r: 0.754717, g: 0.08187969, b: 0.08187969, a: 1}
+    - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EdgeNoiseScroll: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineColor: {r: 1, g: 0.34999996, b: 0.19999996, a: 1}
+    - _RimColor: {r: 1, g: 0.19999996, b: 0.09999997, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

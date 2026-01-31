@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MT_CreepyFilter
+  m_Shader: {fileID: 4800000, guid: 872b99e8f1dd6f64593a55959f06dfdb, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _SCROLLRT_ON
+  - _USECREEPY_ON
+  - _USETINTCOLOR_ON
+  - _WRAP_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CameraRT:
+        m_Texture: {fileID: 2800000, guid: f88677df267a41d6be1e7a6133e7d227, type: 3}
+        m_Scale: {x: 2, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 10916, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaConst: 0
+    - _AlphaMax: 0.2
+    - _AlphaMin: 1
+    - _AlphaMode: 1
+    - _ChromaticShiftPx: 2
+    - _DotScale: 2.2
+    - _DotStrength: 0.22
+    - _FlipRT_H: 0
+    - _FlipRT_V: 0
+    - _GradAmount: 0.8
+    - _GradAxis: 0
+    - _GradBottomY: 0
+    - _GradPower: 1.58
+    - _GradTopY: 0.905
+    - _GradUseColor: 0
+    - _LineAngleDeg: 120
+    - _LineStrength: 0.18
+    - _Mid: 0.55
+    - _MulShapeA: 0
+    - _PosterizeSteps: 4
+    - _Scroll: 0
+    - _ScrollRT: 1
+    - _Src: 0
+    - _TintAmount: 0.318
+    - _UseCreepy: 1
+    - _UseTintColor: 1
+    - _Vignette: 0.45
+    - _WhitePush: 0.153
+    - _Wrap: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _C0: {r: 0.34999996, g: 0, b: 0.079999976, a: 1}
+    - _C1: {r: 1, g: 0.23999995, b: 0.56, a: 1}
+    - _C2: {r: 1, g: 0.9, b: 0.94, a: 1}
+    - _GradColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.4433962, g: 0.17359379, b: 0.17359379, a: 1}
+    - _UVScroll: {r: 0.02, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

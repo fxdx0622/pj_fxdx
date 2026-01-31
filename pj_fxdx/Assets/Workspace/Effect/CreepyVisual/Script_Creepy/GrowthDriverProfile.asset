@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e245e4192972d1498e6a98d58c1d12e, type: 3}
+  m_Name: GrowthDriverProfile
+  m_EditorClassIdentifier: Assembly-CSharp::GrowthDriverProfile
+  autoSeed: 1
+  manualSeed: 100
+  seedLabel: 
+  duration: 4
+  capMode: 1
+  capFixed: 0.394
+  useGrowthMap: 0
+  centerUV: {x: 0.5, y: 0.5}
+  startRadius: 0
+  endRadius: 1
+  useMultiCenters: 1
+  centerCount: 3
+  varyCentersJitter: 1
+  centersJitterRadius: 0.06
+  varyCenterCount: 1
+  centerCountMin: 3
+  centerCountMax: 8
+  centers:
+  - {x: 0, y: 0}
+  - {x: 0.43, y: 0.21}
+  - {x: 0.36, y: 0.44}
+  - {x: 0.63, y: 0.71}
+  animateCenters: 1
+  centersOrbitAmp: 0.02
+  centersOrbitFreqBase: 0.6
+  centersOrbitFreqJitter: 0.3
+  oscillateGrowth: 1
+  oscillateOnlyWhenStopped: 1
+  oscillateWave: 1
+  oscillateMin: 0.541
+  oscillateMax: 1
+  oscillateFreq: 0.3
+  randomizeOnEnable: 1
+  varyStartGrowth: 1
+  startGrowthMin: 0
+  startGrowthMax: 0.2
+  varyStartDelay: 1
+  delayMin: 0
+  delayMax: 0.5
+  varyDuration: 1
+  durationMulMin: 0.8
+  durationMulMax: 1.2
+  varyNoiseOffset: 1
+  noiseOffsetRange: 10
+  applyLookOverrides: 1
+  blendMode: 1
+  bloodMix: 1
+  insideAlpha: 1
+  ignoreBaseAlpha: 0
+  edgeWidth: 0.05
+  rimBoost: 1
+  rimColor: {r: 1, g: 0, b: 0, a: 1}
+  bloodColor: {r: 0.4, g: 0.02, b: 0.02, a: 1}
+  noiseScale: 1
+  noiseAmp: 0.3
+  edgeNoiseScroll: {x: 0.2, y: -0.2}
+  edgeFlowStrength: 0.047
+  rimWobbleAmp: 0.355
+  rimWobbleFreq: 2
