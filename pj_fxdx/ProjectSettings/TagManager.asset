@@ -2,8 +2,12 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - EnemyBullet
+  - Bullet
+  - Enemy
+  - Cube
   layers:
   - Default
   - TransparentFX
@@ -11,11 +15,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
+  - Item
+  - Effect
   - 
   - 
   - 
@@ -41,3 +45,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Out
+    uniqueID: 1667319553
+    locked: 0
+  - name: Background
+    uniqueID: 2674688263
+    locked: 0
+  - name: Building
+    uniqueID: 620985329
+    locked: 0
+  - name: Character
+    uniqueID: 1716794935
+    locked: 0
+  - name: Front
+    uniqueID: 910356999
+    locked: 0
+  - name: Dissolve
+    uniqueID: 3722129935
+    locked: 0
+  m_RenderingLayers:
+  - Default
