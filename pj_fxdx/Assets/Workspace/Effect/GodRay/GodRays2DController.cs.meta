@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 31704fb4596aa114a99d0be529fe272c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - godRaysMaterial: {fileID: 2100000, guid: 363279fd046884c42b1c57526551499a, type: 2}
+  - dustParticles: {instanceID: 0}
+  - dustMaterial: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
