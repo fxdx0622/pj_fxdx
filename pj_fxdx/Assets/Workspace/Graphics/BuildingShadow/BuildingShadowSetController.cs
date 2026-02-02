@@ -19,18 +19,26 @@ public class BuildingShadowElement
 
 	[Header("落ち影の有効化")][SerializeField] private bool enableShadow = true;
 
-	[Header("個別設定の有効化")][SerializeField] private bool useAdditionalSettings = false;
+	[Header("個別調整設定の有効化")][SerializeField] private bool useLocalSettings = false;
 
-	[Header("落ち影のオフセット（個別設定の有効時のみ設定可能）")][SerializeField] private Vector2 additionalLocalOffset = Vector2.zero;
+	[Header("落ち影のオフセット（グローバル設定の値に加算されます）")][SerializeField] private Vector2 localOffset = Vector2.zero;
 
-	[Header("落ち影の角度（個別設定の有効時のみ設定可能）")][SerializeField] private float additionalShearX = 0f;
+	[Header("落ち影の角度（グローバル設定の値に加算されます）")][SerializeField] private float localShearX = 0f;
+
+	[Header("落ち影の高さ（グローバル設定とは関係なしにローカル設定になります）")]
+	[SerializeField, Range(0f, 1f)] private float localHeightScale = 1.0f;
+
+	[Header("落ち影の先端の太さ（グローバル設定とは関係なしにローカル設定になります）")]
+	[SerializeField, Range(0f, 1f)] private float localExpandFar = 0f;
 
 	public string Label => string.IsNullOrEmpty(label) && target != null ? target.name : label;
 	public SpriteRenderer Target => target;
 	public bool EnableShadow => enableShadow;
-	public bool UseAdditionalSettings => useAdditionalSettings;
-	public Vector2 AdditionalLocalOffset => additionalLocalOffset;
-	public float AdditionalShearX => additionalShearX;
+	public bool UseLocalSettings => useLocalSettings;
+	public Vector2 LocalOffset => localOffset;
+	public float LocalShearX => localShearX;
+	public float LocalHeightScale => localHeightScale;
+	public float LocalExpandFar => localExpandFar;
 
 	public void InitializeFromRenderer(SpriteRenderer renderer)
 	{
@@ -41,9 +49,11 @@ public class BuildingShadowElement
 			label = renderer.name;
 
 		enableShadow = true;
-		useAdditionalSettings = false;
-		additionalLocalOffset = Vector2.zero;
-		additionalShearX = 0f;
+		useLocalSettings = false;
+		localOffset = Vector2.zero;
+		localShearX = 0f;
+		localHeightScale = 1f;
+		localExpandFar = 0f;
 	}
 }
 
@@ -63,9 +73,6 @@ public class BuildingShadowSetController : MonoBehaviour
 
 	[Header("落ち影の濃さ")]
 	[SerializeField, Range(0f, 1f)] private float shadowStrength = 0.6f;
-
-	[Header("落ち影の上下方向反転")]
-	[SerializeField] private bool flipVertical = true;
 
 	[Header("落ち影の傾き")]
 	[SerializeField] private float globalShearX = -0.3f;
@@ -135,8 +142,6 @@ public class BuildingShadowSetController : MonoBehaviour
 	{
 		if (runtimes.Count == 0) return;
 
-		float height01 = Mathf.Lerp(0.99f, 1.0f, globalHeightScale);
-		float signedHeight = height01 * (flipVertical ? -1f : 1f);
 		bool playing = Application.isPlaying;
 
 		foreach (var r in runtimes)
@@ -152,12 +157,26 @@ public class BuildingShadowSetController : MonoBehaviour
 
 			Vector2 offset = globalShadowOffset;
 			float shear = globalShearX;
+			float heightScale;
+			float expandFar;
 
-			if (e.UseAdditionalSettings)
+			if (e.UseLocalSettings)
 			{
-				offset += e.AdditionalLocalOffset;
-				shear += e.AdditionalShearX;
+				offset += e.LocalOffset;
+				shear += e.LocalShearX;
+				heightScale = e.LocalHeightScale;
+				expandFar = e.LocalExpandFar;
 			}
+			else
+			{
+				offset = globalShadowOffset;
+				shear = globalShearX;
+				heightScale = globalHeightScale;
+				expandFar = globalExpandFar;
+			}
+
+			float height01 = Mathf.Lerp(0.99f, 1.0f, heightScale);
+			float signedHeight = height01 * -1f;
 
 			var t = sh.transform;
 			t.localPosition = r.baseLocalPosition + new Vector3(offset.x, offset.y, 0);
@@ -173,7 +192,7 @@ public class BuildingShadowSetController : MonoBehaviour
 			mpb.SetFloat(HeightScaleId, signedHeight);
 			mpb.SetColor(ShadowColorId, globalShadowColor);
 			mpb.SetFloat(ShadowStrengthId, shadowStrength);
-			mpb.SetFloat(ExpandFarId, globalExpandFar);
+			mpb.SetFloat(ExpandFarId, expandFar);
 			sh.SetPropertyBlock(mpb);
 		}
 	}
